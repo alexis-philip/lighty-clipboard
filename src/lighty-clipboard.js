@@ -5,6 +5,10 @@
  * The action is performed from a "click" user event.
  * The copied or cut text can be from an text field or from a direct string.
  */
+/**
+ * TODO:
+ *  add production script (minify & remove this.testdata()).
+ */
 class LightyClipboard
 {
     /**
@@ -141,6 +145,11 @@ class LightyClipboard
                 }
                 // Copies from an element.
                 else {
+                    // TODO: copy_trigger must be a input.
+                    //  add functionality so innerHTML / text can be copied.
+                    //  then change testData() "copy_trigger" & "copy_target" tests so they also test innerHTML, make
+                    //    sure you can copy empty innerHTML or value without error!
+                    //  then change "copy_data" to "copy_string".
                     this.copy(this.data.copy_target);
                 }
             }
